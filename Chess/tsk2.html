@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Анкета</title>
+        <script ;anguage="JavaScript">
+            function grant(){
+                var d=document;
+                var k=0;
+                if((d.form1.elements[0]).checked)
+                k=k+Number(d.form1.elements[0].value)
+                if((d.form1.elements[1]).checked)
+                k=k+Number(d.form1.elements[1].value)
+                if((d.form1.elements[2]).checked)
+                k=k+Number(d.form1.elements[2].value)
+                if((d.form1.elements[3]).checked)
+                k=k+Number(d.form1.elements[3].value)
+                if((d.form1.elements[4]).checked)
+                k=k+Number(d.form1.elements[4].value)
+                if((d.form1.elements[5]).checked)
+                k=k+Number(d.form1.elements[5].value)
+            d.form1.output1.value=k
+            }
+        </script>
+    </head>
+</body>
+        <h3> Анкета для перекладачів</h3>
+        вкажіь, якими мовами ви володієте <br />
+    <form name="form1">
+        <Input type="checkbox" name="lan" value=100> Польська<br />
+            <Input type="checkbox" name="lan" value=100> Англійська <br />
+                <Input type="checkbox" name="lan" value=100>Французька<br />
+                    <Input type="checkbox" name="lan" value=100> Німецька<br />
+                        <Input type="checkbox" name="lan" value=100> Китайська<br />
+                            <Input type="checkbox" name="lan" value=100> Японська<br /> <hr />
+        <Input type="text" name="output1" size=10> <br />
+        <input type="button" value=Винагорода onclick="grant()"> <hr />
+        <input type="reset" value="ВІдмінити"> 
+    </form> <hr />
+    </body>
+</html>

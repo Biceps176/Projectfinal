@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація MySoc</title>
+</head>
+<body>
+
+    <h2>Зареєструватися</h2>
+    <p>Це безкоштовно і так буде завжди.</p>
+
+    <form id="registerForm">
+        <input type="text" id="firstName" placeholder="Ім'я" required>
+        <input type="text" id="lastName" placeholder="Прізвище" required>
+        <br><br>
+        <input type="text" id="email" placeholder="Номер мобільного телефону або ел. пошта" required>
+        <br><br>
+        <input type="text" id="password" placeholder="Новий пароль" required>
+        <br><br>
+        
+        <label>День народження</label><br>
+        <select id="day">
+            <script>
+                for (let i = 1; i <= 31; i++) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                }
+            </script>
+        </select>
+
+        <select id="month">
+            <option value="січень">січень</option>
+            <option value="лютий">лютий</option>
+            <option value="березень">березень</option>
+            <option value="квітень">квітень</option>
+            <option value="травень">травень</option>
+            <option value="червень">червень</option>
+            <option value="липень">липень</option>
+            <option value="серпень">серпень</option>
+            <option value="вересень">вересень</option>
+            <option value="жовтень">жовтень</option>
+            <option value="листопад">листопад</option>
+            <option value="грудень">грудень</option>
+        </select>
+
+        <select id="year">
+            <script>
+                for (let i = 2024; i >= 1900; i--) {
+                    document.write(`<option value="${i}">${i}</option>`);
+                }
+            </script>
+        </select>
+
+        <br><br>
+        <label>Стать</label><br>
+        <input type="radio" name="gender" value="жінка"> Жінка
+        <input type="radio" name="gender" value="чоловік"> Чоловік
+        <input type="radio" name="gender" value="інше"> Інше
+
+        <br><br>
+        <button type="submit">Зареєструватися</button>
+    </form>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Форма відправлена!");
+        });
+    </script>
+
+</body>
+</html>
